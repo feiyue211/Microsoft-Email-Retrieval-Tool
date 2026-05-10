@@ -11,11 +11,9 @@
 - 支持读取完整正文、复制正文。
 - 自动识别常见验证码、一次性代码、安全代码，并支持一键复制。
 - 支持自动刷新，适合等待验证码邮件时使用。
-- 无需浏览器登录，打包后可直接运行 exe。
+- 无需浏览器登录，下载后可直接运行 exe。
 
 ## 使用方法
-
-### 方式一：直接运行
 
 从 Release 下载：
 
@@ -24,19 +22,6 @@
 ```
 
 双击运行后，填写邮箱账号信息，点击 `连接`，连接成功后会自动刷新邮件列表。
-
-### 方式二：源码运行
-
-环境要求：
-
-- Windows 10 / Windows 11
-- Python 3.10+
-
-运行：
-
-```bash
-python email_fetcher_gui.py
-```
 
 ## 账号填写格式
 
@@ -98,26 +83,6 @@ example@hotmail.com----your_password----your_client_id----your_refresh_token
 
 工具会匹配常见的 4-10 位数字、字母数字组合以及常见英文/中文验证码提示词。若邮件格式特殊，可以先读取正文，再手动复制正文中的验证码。
 
-## 打包 exe
-
-安装 PyInstaller：
-
-```bash
-python -m pip install pyinstaller
-```
-
-打包：
-
-```bash
-python -m PyInstaller --onefile --noconsole --clean --name "微软邮箱获取工具" email_fetcher_gui.py
-```
-
-打包完成后，程序位于：
-
-```text
-dist/微软邮箱获取工具.exe
-```
-
 ## 安全说明
 
 - 本工具用于读取你本人拥有或已获授权的邮箱账号。
@@ -128,10 +93,13 @@ dist/微软邮箱获取工具.exe
 ## 文件说明
 
 ```text
-email_fetcher_gui.py        主程序源码
 微软邮箱获取工具.exe         Windows 可执行程序
-README.md                  GitHub 项目说明
+README.md                  项目说明
 ```
+
+## 许可
+
+仅供个人学习、测试和授权场景使用。请遵守 Microsoft 服务条款以及当地法律法规。
 
 ## 许可
 
